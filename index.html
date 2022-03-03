@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/CSS/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="box1">
+        <h1>DIN PERSONLIGE HANDLELISTE!</h1>
+      </div>
+      <div class="box2">
+        <h2>1. Varer jeg har nok av hjemme:</h2>
+        <input type="text" id="input-field" placeholder="Skriv inn varer" />
+        <button id="plusBtn" onclick="addGroceryList()">
+          <i class="fas fa-plus"></i>
+        </button>
+        <ul id="grocery-list"></ul>
+      </div>
+      <div class="box3">
+        <h2>2. Varer jeg snart trenger å kjøpe:</h2>
+        <input type="text" id="input-field2" placeholder="Skriv inn varer" />
+        <button id="plusBtn2" onclick="addGroceryList2()">
+          <i class="fas fa-plus"></i>
+        </button>
+        <ul id="grocery-list2"></ul>
+      </div>
+      <div class="box4">
+        <h2>3. Varer jeg skal handle idag! Og hva vil det koste?</h2>
+        <form id="add-form">
+          <label>
+            Navn på vare:
+            <input id="name" type="text" placeholder="Vare" />
+          </label>
+          <label>
+            Pris:
+            <input
+              id="price"
+              type="number"
+              step="0.01"
+              placeholder="Pris pr. stk"
+            />
+          </label>
+          <button id="add" type="submit">
+            <i class="fas fa-plus"></i>
+          </button>
+        </form>
+
+        <ul id="items"></ul>
+
+        <div id="total"></div>
+      </div>
+    </div>
+    <script src="/JS/whatIHave.js"></script>
+    <script src="/JS/whatINeedSoon.js"></script>
+    <script src="/JS/GroceryTotalPrice.js"></script>
+  </body>
+</html>
